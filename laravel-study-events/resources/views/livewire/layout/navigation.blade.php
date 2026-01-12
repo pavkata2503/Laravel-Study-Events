@@ -43,6 +43,9 @@ new class extends Component
 <x-nav-link :href="route('admin.study-events.index')" :active="request()->routeIs('admin.study-events.*')">
     🛠 Admin Events
 </x-nav-link>
+<x-nav-link :href="route('admin.participants.index')" :active="request()->routeIs('admin.participants.*')">
+    👥 Participants
+</x-nav-link>
             </div>
 
             <!-- Settings Dropdown -->

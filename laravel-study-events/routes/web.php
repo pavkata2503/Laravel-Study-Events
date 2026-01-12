@@ -40,4 +40,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/admin/study-events/{studyEvent}', [StudyEventAdminController::class, 'destroy'])->name('admin.study-events.destroy');
 });
 
+use App\Http\Controllers\ParticipantController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('/admin/participants', ParticipantController::class)
+        ->names('admin.participants');
+});
+
 require __DIR__.'/auth.php';

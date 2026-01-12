@@ -29,4 +29,15 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/study-materials/{studyMaterial}', [StudyMaterialController::class, 'destroy'])->name('study-materials.destroy');
 });
 
+use App\Http\Controllers\StudyEventAdminController;
+
+Route::middleware(['auth'])->group(function () {
+    
+    Route::get('/admin/study-events', [StudyEventAdminController::class, 'index'])->name('admin.study-events.index');
+    Route::post('/admin/study-events', [StudyEventAdminController::class, 'store'])->name('admin.study-events.store');
+    Route::get('/admin/study-events/{studyEvent}/edit', [StudyEventAdminController::class, 'edit'])->name('admin.study-events.edit');
+    Route::patch('/admin/study-events/{studyEvent}', [StudyEventAdminController::class, 'update'])->name('admin.study-events.update');
+    Route::delete('/admin/study-events/{studyEvent}', [StudyEventAdminController::class, 'destroy'])->name('admin.study-events.destroy');
+});
+
 require __DIR__.'/auth.php';

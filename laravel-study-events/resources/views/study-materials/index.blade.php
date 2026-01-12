@@ -27,7 +27,7 @@
                     </div>
                     <input type="text" name="title" placeholder="Material title (optional)" class="w-full border rounded p-2 mb-2">
                     <input type="file" name="file" class="w-full border rounded p-2 mb-2">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Upload Material</button>
+                    <button type="submit" style="background-color: #3b82f6; color: white; padding: 0.5rem 1.5rem; border-radius: 0.25rem; width: 100%; font-weight: bold;">Upload Material</button>
                 </form>
 
                 <div class="space-y-4">

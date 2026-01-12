@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class StudyEvent extends Model
 {
    protected $fillable = ['title', 'subject', 'event_date', 'location', 'description'];
+
+   public function studyMaterials()
+{
+    return $this->hasMany(StudyMaterial::class);
+}
 }

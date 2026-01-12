@@ -22,7 +22,7 @@
                     </div>
                     <textarea name="description" placeholder="Description (optional)" rows="3"
                               class="w-full border rounded px-3 py-2 focus:outline-none mb-4"></textarea>
-                    <button class="bg-blue-500 text-white px-6 py-2 rounded">Add Event</button>
+                    <button type="submit" style="background-color: #3b82f6; color: white; padding: 0.5rem 1.5rem; border-radius: 0.25rem; width: 100%; font-weight: bold;">Add Event</button>
                 </form>
 
                 <div class="space-y-4">

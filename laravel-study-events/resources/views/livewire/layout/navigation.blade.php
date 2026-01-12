@@ -37,6 +37,9 @@ new class extends Component
                 <x-nav-link :href="route('study-events.index')" :active="request()->routeIs('study-events.*')">
     📚 {{ __('Study Events') }}
 </x-nav-link>
+<x-nav-link :href="route('study-materials.index')" :active="request()->routeIs('study-materials.*')">
+    📎 {{ __('Study Materials') }}
+</x-nav-link>
             </div>
 
             <!-- Settings Dropdown -->

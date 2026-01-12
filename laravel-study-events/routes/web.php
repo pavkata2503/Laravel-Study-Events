@@ -21,4 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/study-events/{studyEvent}', [StudyEventController::class, 'destroy'])->name('study-events.destroy');
 });
 
+use App\Http\Controllers\StudyMaterialController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/study-materials', [StudyMaterialController::class, 'index'])->name('study-materials.index');
+    Route::post('/study-materials', [StudyMaterialController::class, 'store'])->name('study-materials.store');
+    Route::delete('/study-materials/{studyMaterial}', [StudyMaterialController::class, 'destroy'])->name('study-materials.destroy');
+});
+
 require __DIR__.'/auth.php';
